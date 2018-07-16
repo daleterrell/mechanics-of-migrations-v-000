@@ -105,3 +105,9 @@ Artist.all
  
  Artist.find_by(name: 'Jon')
 # => #<Artist id: 1, name: "Jon", genre: nil, age: 30, hometown: nil>
+
+class AddFavoriteFoodToArtists < ActiveRecord::Migration
+  def change
+    add_column :artists, :favorite_food, :string
+  end
+end
